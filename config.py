@@ -18,13 +18,12 @@ ENV_CONDITIONS = { "TEMPERATURE_K": 298.15, "PRESSURE_ATM": 1.0, "GAS_MOLECULE_D
 
 THRESHOLDS = { "MIN_STABILITY_SCORE": 0.6, "MAX_GIBBS_ENERGY": -5.0, "OPTIMAL_ENTROPY": 0.65 }
 
-# === UPDATED PHYSICS: SURFACE CHEMISTRY MODEL ===
 ACTIVATION_PHYSICS = {
-    "BASE_SURFACE_AREA": 300.0,     # Improved baseline
-    "MAX_THEORETICAL_AREA": 1500.0, # Target for Rice Straw (High silica removal)
-    "SILICA_REMOVAL_EFFICIENCY": 2.5, # Multiplier for Acid Wash
-    "SURFACE_CHEMISTRY_FACTOR": 0.08, # Doubled coefficient for Chemisorption sites
-    "MICROPORE_RATIO": 0.7            # 70% of pores are micropores (Standard for high activation)
+    "BASE_SURFACE_AREA": 300.0,    
+    "MAX_THEORETICAL_AREA": 1500.0,
+    "SILICA_REMOVAL_EFFICIENCY": 2.5, 
+    "SURFACE_CHEMISTRY_FACTOR": 0.08, 
+    "MICROPORE_RATIO": 0.7            
 }
 
 LAB_PROTOCOL_RANGES = {
@@ -32,4 +31,5 @@ LAB_PROTOCOL_RANGES = {
     "ACTIVATION_TIME": (30, 240),
     "MIXING_TEMP": (60, 90),
     "DRYING_TIME": (4, 24)
+
 }
