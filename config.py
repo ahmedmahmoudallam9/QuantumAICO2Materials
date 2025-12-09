@@ -1,0 +1,35 @@
+import numpy as np
+
+SIMULATION_CONFIG = {
+    "GRID_SIZE": 32, "TURING_STEPS": 1000, "QUANTUM_STEPS": 50, "NUM_AGENTS": 10, "RANDOM_SEED": 42,
+}
+TURING_PARAMS = { "Du": 0.16, "Dv": 0.08, "f": 0.060, "k": 0.062 }
+HYPERBOLIC_PARAMS = { "CURVATURE_K": -1.0, "POINCARE_RADIUS": 10.0 }
+QUANTUM_PARAMS = { "COIN_BIAS": 0.5, "DECOHERENCE_RATE": 0.01, "TUNNELING_FACTOR": 0.15 }
+
+MATERIALS_DB = {
+    "GELATIN": {"Enthalpy_H": -5500.0, "Entropy_S": 120.0},
+    "STARCH":  {"Enthalpy_H": -4200.0, "Entropy_S": 150.0},
+    "BIOCHAR": {"Enthalpy_H": -393.5,  "Entropy_S": 5.7},
+    "GLYCEROL":{"Enthalpy_H": -668.5,  "Entropy_S": 206.0}
+}
+
+ENV_CONDITIONS = { "TEMPERATURE_K": 298.15, "PRESSURE_ATM": 1.0, "GAS_MOLECULE_DIA": 0.33 }
+
+THRESHOLDS = { "MIN_STABILITY_SCORE": 0.6, "MAX_GIBBS_ENERGY": -5.0, "OPTIMAL_ENTROPY": 0.65 }
+
+# === UPDATED PHYSICS: SURFACE CHEMISTRY MODEL ===
+ACTIVATION_PHYSICS = {
+    "BASE_SURFACE_AREA": 300.0,     # Improved baseline
+    "MAX_THEORETICAL_AREA": 1500.0, # Target for Rice Straw (High silica removal)
+    "SILICA_REMOVAL_EFFICIENCY": 2.5, # Multiplier for Acid Wash
+    "SURFACE_CHEMISTRY_FACTOR": 0.08, # Doubled coefficient for Chemisorption sites
+    "MICROPORE_RATIO": 0.7            # 70% of pores are micropores (Standard for high activation)
+}
+
+LAB_PROTOCOL_RANGES = {
+    "PYROLYSIS_TEMP": (300, 700),
+    "ACTIVATION_TIME": (30, 240),
+    "MIXING_TEMP": (60, 90),
+    "DRYING_TIME": (4, 24)
+}

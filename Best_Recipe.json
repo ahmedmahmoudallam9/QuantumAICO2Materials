@@ -1,0 +1,39 @@
+{
+    "experiment_meta": {
+        "input_type": "Biochar",
+        "input_mass_g": 6.0,
+        "calculated_biochar_g": 6.0,
+        "resulting_total_mass_g": 10.91,
+        "predicted_batch_uptake_g": 0.7265,
+        "efficiency_g_per_g": 0.0666,
+        "biochar_concentration_percent": 55.0
+    },
+    "components_grams": {
+        "Starch": 2.19,
+        "Gelatin": 1.46,
+        "Glycerol": 1.27,
+        "Biochar": 6.0
+    },
+    "biochar_prep": {
+        "source_material_note": "Start with 6.0g Biochar",
+        "step_1": "Grind Rice Straw to fine powder",
+        "step_2_acid_wash": "Soak in HCL (30%) for 114 minutes",
+        "step_3_pyrolysis": "Heat at 560\u00b0C",
+        "activation_goal": "Target Surface Area: 1238 m2/g"
+    },
+    "process_steps": {
+        "mixing_temp_c": 85,
+        "stirring_speed_rpm": 500,
+        "stirring_min": 45,
+        "dry_hours": 24,
+        "curing_temp_c": 25
+    },
+    "prediction_metrics": {
+        "Gibbs_Energy": -23672.073449999996,
+        "Shannon_Entropy": 0.5347901802708198,
+        "Predicted_CO2_Grams": 6.6598,
+        "Virtual_Surface_Area_m2g": 1238
+    },
+    "ai_score": 1664.95,
+    "experiment_id": 293
+}
